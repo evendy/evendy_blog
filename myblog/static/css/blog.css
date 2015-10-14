@@ -1,0 +1,36 @@
+.blog {
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.blog_text_color {
+    color: #674b40;
+    font-family: Verdana;
+}
+
+.blog_title {
+    text-align: center;
+    display: block;
+    font-size: 40px;
+    padding: 20px 0 0 0;
+    text-decoration: none;
+}
+
+.blog_disc {
+    padding: 20px 0;
+}
+
+.blog_disc_text {
+    text-align: right;
+    display: block;
+    color: #a19890;
+    font-size: 16px;
+    padding: 10px 10px 0 0;
+}
+
+.blog_content {
+    display: block;
+    font-size: 20px;
+    padding: 20px 40px;
+}

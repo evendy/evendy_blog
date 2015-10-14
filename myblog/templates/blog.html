@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mark %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pygments_css/friendly.css' %}"/>
+{% endblock %}
+
+{% block title %}-{{ blog.title }}{% endblock %}
+
+{% block content %}
+    <article class="blog content_div box">
+        <header>
+            <h1 class="blog_title blog_text_color">{{ blog.title }}</h1>
+        </header>
+        <div class="blog_disc">
+            <div class="blog_disc_text blog_text_color">{{ blog.time|date:"Y.m.j G:i" }}</div>
+            <div class="blog_disc_text blog_text_color">{{ blog.author.name }}</div>
+        </div>
+
+        <div class="blog_content blog_text_color">{{ blog.body|markdowns|safe }}</div>
+    </article>
+{% endblock %}

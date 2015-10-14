@@ -1,0 +1,41 @@
+.article_list {
+    margin: 10px auto;
+}
+
+.blog_item {
+    padding: 5px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.blog_item_text_color {
+    color: #674b40;
+    font-family: Verdana;
+}
+
+.blog_item_title {
+    display: block;
+    font-size: 23px;
+    padding-left: 10px;
+    line-height: 50px;
+}
+
+.blog_item_disc {
+    display: block;
+    color: #a19890;
+    font-size: 14px;
+    padding: 10px 10px 0 10px;
+}
+
+.blog_item_content {
+    display: block;
+    font-size: 20px;
+    padding: 20px 40px;
+}
+
+.blog_item_footer {
+    border-top: 1px dashed #674b40;
+    height: 30px;
+}
+
+

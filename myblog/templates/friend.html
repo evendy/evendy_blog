@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/friend.css' %}"/>
+{% endblock %}
+
+
+{% block title %}-Friend{% endblock %}
+{% block content %}
+    <article class="friend_body content_div box">
+        <header>
+            <img src="{% static 'img/friend.jpg' %}" class="friend_image">
+
+            <h1 class="friend_title friend_text_color bottom_border_line">邻居</h1>
+        </header>
+        <div class="friend_list"></div>
+    </article>
+{% endblock %}

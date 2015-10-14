@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/archive.css' %}"/>
+{% endblock %}
+
+
+{% block title %}-Archive{% endblock %}
+{% block content %}
+    <article class="archive_body content_div box">
+        <header>
+            <img src="{% static 'img/archive.jpg' %}" class="archive_image">
+
+            <h1 class="archive_title archive_text_color bottom_border_line">归档</h1>
+        </header>
+        {% for blog in sorted_blogs %}
+            <article class="sorted_archive">
+                <div class="archive_blog_item">
+                    <a class="archive_text_color" href="../blog/?blog_id={{ blog.id }}">
+                        <span class="blog_item_time">{{ blog.time|date:"m-j" }}</span>
+                        {{ blog.title }}
+                    </a>
+                </div>
+            </article>
+        {% endfor %}
+    </article>
+{% endblock %}

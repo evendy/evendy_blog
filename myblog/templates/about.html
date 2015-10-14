@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"/>
+{% endblock %}
+
+
+{% block title %}-About{% endblock %}
+{% block content %}
+    <article class="about_body content_div box">
+        <header>
+            <img src="{% static 'img/about.jpg' %}" class="about_image">
+
+            <h1 class="about_title about_text_color bottom_border_line">关于</h1>
+        </header>
+        <p class="about_content about_text_color"> {{ author.introduce }}</p>
+    </article>
+{% endblock %}

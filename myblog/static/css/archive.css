@@ -1,0 +1,33 @@
+.archive_body {
+    margin: 10px auto;
+    padding: 10px;
+    position: relative;
+    top: -80px
+}
+
+.archive_text_color {
+    color: #674b40;
+}
+
+.archive_image {
+    width: 100%;
+}
+
+.archive_title {
+    padding: 15px 10px;
+    font-size: 25px;
+    color: #6A4A3C;
+    text-shadow: rgba(255, 255, 255, 0.85) 0px 1px 0px;
+}
+
+.sorted_archive {
+}
+
+.archive_blog_item {
+    margin: 10px 10px;
+    font-size: 19px;
+    border-radius: 5px;
+    border: 1px solid #dbd4cb;
+    background-color: #efece2;
+    padding: 5px 5px;
+}

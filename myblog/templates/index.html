@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load mark %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+{% endblock %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    <article class="article_list content_div">
+        {% for blog in blogs %}
+            <article class="blog_item box">
+                <header class="bottom_border_line"><a href="../blog/?blog_id={{ blog.id }}"
+                                                    class="blog_item_title blog_item_text_color">{{ blog.title }}</a>
+                </header>
+                <div class="blog_item_disc blog_item_text_color">{{ blog.author.name }}
+                    更新于 {{ blog.time|date:"Y.m.j G:i" }}</div>
+
+                <div class="blog_item_content blog_item_text_color">{{ blog.body|markdowns|safe }}</div>
+                <footer class="blog_item_footer"></footer>
+            </article>
+        {% endfor %}
+    </article>
+{% endblock %}

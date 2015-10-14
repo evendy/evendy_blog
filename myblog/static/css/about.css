@@ -1,0 +1,29 @@
+.about_body {
+    margin: 10px auto;
+    padding: 10px;
+    position: relative;
+    top: -80px
+}
+
+.about_text_color {
+    color: #674b40;
+}
+
+.about_image {
+    width: 100%;
+}
+
+.about_title {
+    padding: 15px 10px;
+    font-size: 25px;
+    color: #6A4A3C;
+    text-shadow: rgba(255, 255, 255, 0.85) 0px 1px 0px;
+}
+
+.about_content {
+    display: block;
+    padding: 10px 10px;
+    font-size: 18px;
+    text-shadow: rgba(255, 255, 255, 0.85) 0px 1px 0px;
+    line-height: 30px;
+}
