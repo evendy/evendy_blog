@@ -17,7 +17,8 @@ class BlogUser(models.Model):
     password = models.CharField(verbose_name="登陆密码", max_length=20, blank=False, null=True)
 
     name = models.CharField(verbose_name="博主名称", max_length=100, blank=False, null=True)
-    avatar = models.ImageField(verbose_name="头像", upload_to="avatar/%Y/%m", blank=True)
+    avatar = models.ImageField(verbose_name="头像", upload_to="avatar/%Y/%m", blank=False, null=True,
+                               default="avatar/default-avatar.png")
     introduce = models.TextField(verbose_name="介绍", blank=True, null=True)
 
     qq = models.CharField(verbose_name="QQ", max_length=20, blank=True, null=True)
@@ -32,7 +33,8 @@ class BlogUser(models.Model):
 # 博客留言表
 class BlogMessage(models.Model):
     name = models.CharField(verbose_name="留言者名称", max_length=100, blank=False, null=True)
-    avatar = models.ImageField(verbose_name="头像", upload_to="avatar/%Y/%m", blank=True)
+    avatar = models.ImageField(verbose_name="头像", upload_to="avatar/%Y/%m", blank=False, null=True,
+                               default="avatar/default-avatar.png")
 
     body = models.TextField(verbose_name="留言内容", blank=False, null=True)
     email = models.EmailField(verbose_name="电子邮箱", blank=False, null=True)
@@ -47,7 +49,8 @@ class BlogMessage(models.Model):
 # 博客友情链接表
 class BlogFriend(models.Model):
     name = models.CharField(verbose_name="邻居", max_length=100, blank=False, null=True)
-    avatar = models.ImageField(verbose_name="头像", upload_to="avatar/%Y/%m", blank=True)
+    avatar = models.ImageField(verbose_name="头像", upload_to="avatar/%Y/%m", blank=False, null=True,
+                               default="avatar/default-avatar.png")
     link = models.CharField(verbose_name="网站", max_length=20, blank=False, null=True)
 
     def __unicode__(self):
@@ -57,7 +60,8 @@ class BlogFriend(models.Model):
 # 文章留言表
 class BlogArticleComment(models.Model):
     name = models.CharField(verbose_name="留言者名称", max_length=100, blank=False, null=True)
-    avatar = models.ImageField(verbose_name="头像", upload_to="avatar/%Y/%m", blank=True)
+    avatar = models.ImageField(verbose_name="头像", upload_to="avatar/%Y/%m", blank=False, null=True,
+                               default="avatar/default-avatar.png")
     time = models.DateTimeField(verbose_name="留言时间", blank=False, null=True)
     body = models.TextField(verbose_name="留言内容", blank=False, null=True)
     email = models.EmailField(verbose_name="电子邮箱", blank=False, null=True)
